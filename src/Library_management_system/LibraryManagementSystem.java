@@ -8,7 +8,7 @@ public class LibraryManagementSystem {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Welcome to the Library_management_system.Library Management System!");
-        System.out.println("You are the librarian. Let's manage the library.");
+        System.out.println("You are the librarian.");
 
         while (true) {
             System.out.println("\nChoose an action:");
@@ -32,18 +32,18 @@ public class LibraryManagementSystem {
                     String author = scanner.nextLine();
                     String genre = scanner.nextLine();
                     library.getBooks().add(new Book(bookId, title, author, genre));
-                    System.out.println("Library_management_system.Book added successfully.");
+                    System.out.println("Book added successfully.");
                     break;
 
                 case 2:
                     System.out.println("Enter the ID of the book to remove:");
                     bookId = scanner.nextLine();
                     library.getBooks().removeIf(book -> book.getBookId().equals(bookId));
-                    System.out.println("Library_management_system.Book removed if it existed.");
+                    System.out.println("Book removed if it existed.");
                     break;
 
                 case 3:
-                    System.out.println("All Books in the Library_management_system.Library:");
+                    System.out.println("All Books in the Library:");
                     for (Book book : library.getBooks()) {
                         book.displayDetails();
                     }
@@ -61,7 +61,7 @@ public class LibraryManagementSystem {
                     System.out.println("Enter the ID of the member to remove:");
                     memberId = scanner.nextLine();
                     library.getMembers().removeIf(member -> member.getMemberId().equals(memberId));
-                    System.out.println("Library_management_system.Member removed if they existed.");
+                    System.out.println("Member removed if they existed.");
                     break;
 
                 case 6:
@@ -79,11 +79,11 @@ public class LibraryManagementSystem {
                             .orElse(null);
 
                     if (member == null) {
-                        System.out.println("Library_management_system.Member not found.");
+                        System.out.println("Member not found.");
                         break;
                     }
 
-                    System.out.println("Enter Library_management_system.Book ID:");
+                    System.out.println("Enter Book ID:");
                     bookId = scanner.nextLine();
                     Book book = library.getBooks().stream()
                             .filter(b -> b.getBookId().equals(bookId))
@@ -91,11 +91,11 @@ public class LibraryManagementSystem {
                             .orElse(null);
 
                     if (book == null) {
-                        System.out.println("Library_management_system.Book not found.");
+                        System.out.println("Book not found.");
                         break;
                     }
 
-                    System.out.println("1. Borrow Library_management_system.Book\n2. Return Library_management_system.Book");
+                    System.out.println("1. Borrow Book\n2. Return Book");
                     int action = scanner.nextInt();
                     scanner.nextLine();
 
