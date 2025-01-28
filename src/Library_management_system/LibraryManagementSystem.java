@@ -7,17 +7,17 @@ public class LibraryManagementSystem {
         Library library = new Library();
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Welcome to the Library_management_system.Library Management System!");
+        System.out.println("Welcome to the Library Management System!");
         System.out.println("You are the librarian.");
 
         while (true) {
             System.out.println("\nChoose an action:");
-            System.out.println("1. Add a Library_management_system.Book");
-            System.out.println("2. Remove a Library_management_system.Book");
+            System.out.println("1. Add a .Book");
+            System.out.println("2. Remove a Book");
             System.out.println("3. View All Books");
-            System.out.println("4. Add a Library_management_system.Member");
-            System.out.println("5. Remove a Library_management_system.Member");
-            System.out.println("6. Search for a Library_management_system.Book");
+            System.out.println("4. Add a Member");
+            System.out.println("5. Remove a Member");
+            System.out.println("6. Search for a Book");
             System.out.println("7. Manage Transactions");
             System.out.println("8. Exit");
 
@@ -71,7 +71,7 @@ public class LibraryManagementSystem {
                     break;
 
                 case 7:
-                    System.out.println("Enter Library_management_system.Member ID:");
+                    System.out.println("Enter Member ID:");
                     memberId = scanner.nextLine();
                     Member member = library.getMembers().stream()
                             .filter(m -> m.getMemberId().equals(memberId))
