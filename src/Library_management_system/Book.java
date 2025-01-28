@@ -38,19 +38,19 @@ class Book {
     public void issueBook() {
         if (isAvailable) {
             isAvailable = false;
-            System.out.println("Library_management_system.Book issued successfully.");
+            System.out.println("Book issued successfully.");
         } else {
-            System.out.println("Library_management_system.Book is not available.");
+            System.out.println("Book is not available.");
         }
     }
 
     public void returnBook() {
         isAvailable = true;
-        System.out.println("Library_management_system.Book returned successfully.");
+        System.out.println("Book returned successfully.");
     }
 
     public void displayDetails() {
-        System.out.println("Library_management_system.Book ID: " + bookId);
+        System.out.println("Book ID: " + bookId);
         System.out.println("Title: " + title);
         System.out.println("Author: " + author);
         System.out.println("Genre: " + genre);
