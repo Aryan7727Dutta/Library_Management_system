@@ -15,14 +15,14 @@ class Library {
 
     public void addMember(Member member) {
         members.add(member);
-        System.out.println("Library_management_system.Member added successfully.");
+        System.out.println("Member added successfully.");
     }
 
     public void removeMember(Member member) {
         if (members.remove(member)) {
-            System.out.println("Library_management_system.Member removed successfully.");
+            System.out.println("Member removed successfully.");
         } else {
-            System.out.println("Library_management_system.Member not found.");
+            System.out.println("Member not found.");
         }
     }
 
