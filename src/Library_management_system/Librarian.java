@@ -16,19 +16,19 @@ class Librarian {
 
     public void addBook(List<Book> books, Book book) {
         books.add(book);
-        System.out.println("Library_management_system.Book added successfully.");
+        System.out.println("Book added successfully.");
     }
 
     public void removeBook(List<Book> books, Book book) {
         if (books.remove(book)) {
-            System.out.println("Library_management_system.Book removed successfully.");
+            System.out.println("Book removed successfully.");
         } else {
-            System.out.println("Library_management_system.Book not found in the collection.");
+            System.out.println("Book not found in the collection.");
         }
     }
 
     public void viewAllBooks(List<Book> books) {
-        System.out.println("All Books in the Library_management_system.Library:");
+        System.out.println("All Books in the Library:");
         for (Book book : books) {
             book.displayDetails();
         }
